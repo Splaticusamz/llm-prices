@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 
 const STATUS = {
-  phase: 'Build Phase',
-  overall: 65,
+  phase: 'Deploy Phase',
+  overall: 90,
   launched: false,
   repoUrl: 'https://github.com/Splaticusamz/llm-prices',
   startDate: '2026-03-23',
@@ -16,13 +16,16 @@ const TASKS = [
   { name: 'GitHub Repo + Vercel Config', status: 'done' },
   { name: 'Discord Channel (#💰llm-prices)', status: 'done' },
   { name: 'Documentation (README, CHANGELOG)', status: 'done' },
-  { name: 'Comparison Table Component', status: 'in-progress' },
-  { name: 'Cost Calculator Component', status: 'in-progress' },
-  { name: 'Landing Page + SEO Meta', status: 'pending' },
-  { name: 'Affiliate Links Integration', status: 'pending' },
+  { name: 'Comparison Table Component (sort/filter)', status: 'done' },
+  { name: 'Cost Calculator Component (presets)', status: 'done' },
+  { name: 'Landing Page + SEO Meta', status: 'done' },
+  { name: 'Affiliate Links Integration', status: 'done' },
+  { name: 'Individual Model Pages (13 pages)', status: 'done' },
+  { name: 'Blog Posts (3 SEO articles)', status: 'done' },
+  { name: 'Sitemap + robots.txt', status: 'done' },
+  { name: 'Pricing Scraper (GitHub Action)', status: 'done' },
+  { name: 'Analytics Placeholder', status: 'done' },
   { name: 'Deploy to Vercel (Production)', status: 'pending' },
-  { name: 'Pricing Scraper (GitHub Action)', status: 'pending' },
-  { name: 'SEO Blog Pages', status: 'pending' },
 ];
 
 const REVENUE_TIMELINE = [
