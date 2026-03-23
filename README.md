@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LLM Prices — AI API Price Comparison & Calculator
 
-## Getting Started
+> PCPartPicker for AI APIs. Compare costs across every major LLM provider.
 
-First, run the development server:
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/botsix-workspace/llm-prices)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## What is this?
+
+A fast, clean comparison site for LLM API pricing. Input your expected token usage, get instant cost breakdowns across all major providers (OpenAI, Anthropic, Google, Mistral, Meta, and more).
+
+**Live at:** _TBD (Vercel deployment pending)_
+
+## Architecture
+
+```
+┌─────────────────────────────────────────┐
+│            Next.js 15 (App Router)       │
+│  ┌─────────┐  ┌──────────┐  ┌────────┐ │
+│  │ Compare  │  │   Cost   │  │  SEO   │ │
+│  │  Table   │  │ Calcuator│  │ Pages  │ │
+│  └─────────┘  └──────────┘  └────────┘ │
+│         ▲            ▲           ▲       │
+│         └────────────┼───────────┘       │
+│              Static JSON Data            │
+│         (providers, models, pricing)     │
+└─────────────────────────────────────────┘
+         ▲
+         │ Weekly update
+   GitHub Action Scraper
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Framework:** Next.js 15 + TypeScript + Tailwind CSS
+- **Data Layer:** Static JSON pricing files (no database needed)
+- **Updates:** GitHub Action scraper runs weekly to pull latest pricing
+- **Hosting:** Vercel (free tier)
+- **SEO:** Static generation for all pages, structured data
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Revenue Model
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Channel | Timeline | Estimated Revenue |
+|---------|----------|-------------------|
+| Cloud credit affiliate links (AWS, GCP, Azure) | Month 3+ | $50–200/mo |
+| API platform referral programs | Month 3+ | $20–100/mo |
+| Google AdSense | Month 6+ | $50–200/mo |
 
-## Learn More
+**Target:** $200–500/mo passive income by month 6.
 
-To learn more about Next.js, take a look at the following resources:
+## Key Features (Planned)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [ ] Provider comparison table (input/output per 1M tokens)
+- [ ] Interactive cost calculator
+- [ ] "Best for your use case" recommendations
+- [ ] Blog/SEO pages (e.g., "Claude 4 vs GPT-5 pricing 2026")
+- [ ] Pricing history charts
+- [ ] API for programmatic access
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Development
 
-## Deploy on Vercel
+```bash
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # Production build
+npm run lint    # Lint check
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Data Sources
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pricing data is sourced from official provider documentation and updated weekly:
+
+- OpenAI: https://openai.com/pricing
+- Anthropic: https://anthropic.com/pricing
+- Google (Gemini): https://ai.google.dev/pricing
+- Mistral: https://mistral.ai/pricing
+- And more...
+
+## License
+
+MIT
