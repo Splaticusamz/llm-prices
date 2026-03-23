@@ -50,6 +50,44 @@
         { "id": "deepseek-r1", "name": "DeepSeek R1", "inputPricePer1M": 0.55, "outputPricePer1M": 2.19, "contextWindow": 128000, "category": "mid" },
         { "id": "deepseek-v3", "name": "DeepSeek V3", "inputPricePer1M": 0.27, "outputPricePer1M": 1.10, "contextWindow": 128000, "category": "budget" }
       ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "url": "https://docs.x.ai/docs/models",
+      "models": [
+        { "id": "grok-3", "name": "Grok 3", "inputPricePer1M": 3.00, "outputPricePer1M": 15.00, "contextWindow": 131072, "category": "flagship" },
+        { "id": "grok-3-mini", "name": "Grok 3 Mini", "inputPricePer1M": 0.30, "outputPricePer1M": 0.50, "contextWindow": 131072, "category": "budget" }
+      ]
+    },
+    {
+      "id": "cohere",
+      "name": "Cohere",
+      "url": "https://cohere.com/pricing",
+      "models": [
+        { "id": "command-r-plus", "name": "Command R+", "inputPricePer1M": 2.50, "outputPricePer1M": 10.00, "contextWindow": 128000, "category": "flagship" },
+        { "id": "command-r", "name": "Command R", "inputPricePer1M": 0.15, "outputPricePer1M": 0.60, "contextWindow": 128000, "category": "budget" }
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta (via Together)",
+      "url": "https://www.together.ai/pricing",
+      "models": [
+        { "id": "llama-4-maverick", "name": "Llama 4 Maverick", "inputPricePer1M": 0.27, "outputPricePer1M": 0.85, "contextWindow": 1048576, "category": "mid" },
+        { "id": "llama-4-scout", "name": "Llama 4 Scout", "inputPricePer1M": 0.18, "outputPricePer1M": 0.30, "contextWindow": 512000, "category": "budget" },
+        { "id": "llama-3.3-70b", "name": "Llama 3.3 70B", "inputPricePer1M": 0.88, "outputPricePer1M": 0.88, "contextWindow": 128000, "category": "mid" }
+      ]
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "url": "https://aws.amazon.com/bedrock/pricing/",
+      "models": [
+        { "id": "nova-pro", "name": "Nova Pro", "inputPricePer1M": 0.80, "outputPricePer1M": 3.20, "contextWindow": 300000, "category": "mid" },
+        { "id": "nova-lite", "name": "Nova Lite", "inputPricePer1M": 0.06, "outputPricePer1M": 0.24, "contextWindow": 300000, "category": "budget" },
+        { "id": "nova-micro", "name": "Nova Micro", "inputPricePer1M": 0.035, "outputPricePer1M": 0.14, "contextWindow": 128000, "category": "budget" }
+      ]
     }
   ]
 }
