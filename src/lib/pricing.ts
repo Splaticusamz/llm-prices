@@ -83,6 +83,32 @@ export const AFFILIATE_LINKS = {
   anthropic: { url: 'https://console.anthropic.com/', label: 'Anthropic', credit: '$5' },
 };
 
+export function generateVSPairs(): { modelA: Model; modelB: Model; slug: string }[] {
+  const models = getAllModels();
+  const pairs: { modelA: Model; modelB: Model; slug: string }[] = [];
+  for (let i = 0; i < models.length; i++) {
+    for (let j = i + 1; j < models.length; j++) {
+      const a = models[i], b = models[j];
+      if (a.providerId !== b.providerId && a.category === b.category) {
+        pairs.push({ modelA: a, modelB: b, slug: `${a.id}-vs-${b.id}` });
+      }
+    }
+  }
+  return pairs;
+}
+
+export function getProviders(): { id: string; name: string; url: string; models: Model[] }[] {
+  const models = getAllModels();
+  const map = new Map<string, { id: string; name: string; url: string; models: Model[] }>();
+  for (const m of models) {
+    if (!map.has(m.providerId)) {
+      map.set(m.providerId, { id: m.providerId, name: m.provider, url: m.providerUrl, models: [] });
+    }
+    map.get(m.providerId)!.models.push(m);
+  }
+  return Array.from(map.values());
+}
+
 export const PRESETS = [
   { name: 'Light', input: 1_000_000, output: 500_000, desc: 'Small chatbot or prototype' },
   { name: 'Medium', input: 10_000_000, output: 5_000_000, desc: 'Production app' },

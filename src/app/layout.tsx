@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Search from "@/components/Search";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
@@ -31,6 +32,7 @@ function Nav() {
           <a href="/compare" className="text-zinc-400 hover:text-white transition-colors">Compare</a>
           <a href="/calculator" className="text-zinc-400 hover:text-white transition-colors">Calculator</a>
           <a href="/blog" className="text-zinc-400 hover:text-white transition-colors">Blog</a>
+          <Search />
         </div>
       </nav>
     </header>
