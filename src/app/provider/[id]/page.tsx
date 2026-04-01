@@ -42,24 +42,23 @@ export default async function ProviderPage({ params }: { params: Promise<{ id: s
         <a href="/compare" className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors">← Back to comparison</a>
       </div>
 
-      <div className="flex items-start justify-between flex-wrap gap-4 mb-8">
+      <div className="flex items-start justify-between flex-wrap gap-4 mb-4">
         <div>
           <h1 className="text-3xl md:text-4xl font-bold">{provider.name}</h1>
           <p className="text-zinc-400 mt-1">{provider.models.length} models · Input range: {formatPrice(cheapest.inputPricePer1M)} – {formatPrice(priciest.inputPricePer1M)} / 1M tokens</p>
         </div>
-        <div className="flex gap-2">
-          {affiliate && (
-            <a href={affiliate.url} target="_blank" rel="noopener noreferrer"
-              className="px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-black font-semibold rounded-lg text-sm transition-colors">
-              Sign Up — {affiliate.credit} credit →
-            </a>
-          )}
-          <a href={provider.url} target="_blank" rel="noopener noreferrer"
-            className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 rounded-lg text-sm transition-colors">
-            Official Pricing →
-          </a>
-        </div>
+        <a href={provider.url} target="_blank" rel="noopener noreferrer"
+          className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 rounded-lg text-sm transition-colors">
+          Official Pricing →
+        </a>
       </div>
+
+      {affiliate && (
+        <a href={affiliate.url} target="_blank" rel="noopener noreferrer"
+          className="mb-8 flex items-center justify-center gap-2 w-full px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-black font-bold rounded-xl text-lg transition-colors shadow-lg shadow-emerald-500/20">
+          Get {provider.name} API Key →{affiliate.credit ? ` — ${affiliate.credit} free credit` : ''}
+        </a>
+      )}
 
       <div className="space-y-3">
         {sorted.map(m => (

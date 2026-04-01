@@ -75,12 +75,22 @@ export function formatContextWindow(tokens: number): string {
   return `${(tokens / 1_000).toFixed(0)}K`;
 }
 
-export const AFFILIATE_LINKS = {
-  aws: { url: 'https://aws.amazon.com/free/', label: 'AWS Free Tier', credit: '$300' },
-  gcp: { url: 'https://cloud.google.com/free', label: 'Google Cloud', credit: '$300' },
-  azure: { url: 'https://azure.microsoft.com/free/', label: 'Azure', credit: '$200' },
-  openai: { url: 'https://platform.openai.com/signup', label: 'OpenAI', credit: '$5' },
-  anthropic: { url: 'https://console.anthropic.com/', label: 'Anthropic', credit: '$5' },
+const UTM = '?utm_source=llmprices&utm_medium=referral&utm_campaign=provider';
+
+export const AFFILIATE_LINKS: Record<string, { url: string; label: string; credit?: string }> = {
+  aws: { url: `https://aws.amazon.com/free/${UTM}`, label: 'AWS Free Tier', credit: '$300' },
+  gcp: { url: `https://cloud.google.com/free${UTM}`, label: 'Google Cloud', credit: '$300' },
+  azure: { url: `https://azure.microsoft.com/free/${UTM}`, label: 'Azure', credit: '$200' },
+  openai: { url: `https://platform.openai.com/signup${UTM}`, label: 'OpenAI', credit: '$5' },
+  anthropic: { url: `https://console.anthropic.com/${UTM}`, label: 'Anthropic', credit: '$5' },
+  google: { url: `https://aistudio.google.com/${UTM}`, label: 'Google AI Studio', credit: 'Free tier' },
+  mistral: { url: `https://console.mistral.ai/${UTM}`, label: 'Mistral AI', credit: '$5' },
+  cohere: { url: `https://dashboard.cohere.com/welcome/register${UTM}`, label: 'Cohere', credit: 'Free tier' },
+  together: { url: `https://api.together.xyz/signup${UTM}`, label: 'Together AI', credit: '$5' },
+  fireworks: { url: `https://fireworks.ai/login${UTM}`, label: 'Fireworks AI', credit: '$1' },
+  groq: { url: `https://console.groq.com/signup${UTM}`, label: 'Groq', credit: 'Free tier' },
+  deepseek: { url: `https://platform.deepseek.com/sign_up${UTM}`, label: 'DeepSeek', credit: '$5' },
+  perplexity: { url: `https://docs.perplexity.ai/${UTM}`, label: 'Perplexity', credit: '$5' },
 };
 
 export function generateVSPairs(): { modelA: Model; modelB: Model; slug: string }[] {

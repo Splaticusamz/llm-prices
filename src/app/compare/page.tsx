@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { getAllModels, formatPrice, formatContextWindow, type Model } from '@/lib/pricing';
+import { getAllModels, formatPrice, formatContextWindow, AFFILIATE_LINKS, type Model } from '@/lib/pricing';
 
 type SortKey = 'name' | 'provider' | 'inputPricePer1M' | 'outputPricePer1M' | 'contextWindow' | 'category';
 type SortDir = 'asc' | 'desc';
@@ -114,7 +114,15 @@ export default function ComparePage() {
           <tbody className="divide-y divide-zinc-800">
             {filtered.map(m => (
               <tr key={m.id} className="hover:bg-zinc-900/50 transition-colors">
-                <td className="px-4 py-3 text-zinc-400">{m.provider}</td>
+                <td className="px-4 py-3 text-zinc-400">
+                  {m.provider}
+                  {AFFILIATE_LINKS[m.providerId] && (
+                    <a href={AFFILIATE_LINKS[m.providerId].url} target="_blank" rel="noopener noreferrer"
+                      className="ml-2 text-xs text-emerald-400 hover:text-emerald-300 transition-colors">
+                      Get Key
+                    </a>
+                  )}
+                </td>
                 <td className="px-4 py-3 font-medium">
                   <a href={`/model/${m.id}`} className="hover:text-emerald-400 transition-colors">{m.name}</a>
                 </td>

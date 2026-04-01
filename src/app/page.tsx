@@ -65,9 +65,17 @@ export default function Home() {
                   <div className="text-sm text-zinc-500">{m.provider} · {formatContextWindow(m.contextWindow)} context</div>
                 </div>
               </div>
-              <div className="text-right">
-                <div className="text-emerald-400 font-mono font-bold">{formatPrice(m.inputPricePer1M)} / {formatPrice(m.outputPricePer1M)}</div>
-                <div className="text-xs text-zinc-500">input / output per 1M tokens</div>
+              <div className="flex items-center gap-4">
+                <div className="text-right">
+                  <div className="text-emerald-400 font-mono font-bold">{formatPrice(m.inputPricePer1M)} / {formatPrice(m.outputPricePer1M)}</div>
+                  <div className="text-xs text-zinc-500">input / output per 1M tokens</div>
+                </div>
+                {AFFILIATE_LINKS[m.providerId] && (
+                  <a href={AFFILIATE_LINKS[m.providerId].url} target="_blank" rel="noopener noreferrer"
+                    className="shrink-0 px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 hover:bg-emerald-500/20 rounded-lg text-xs font-semibold transition-colors">
+                    Try it →
+                  </a>
+                )}
               </div>
             </a>
           ))}
