@@ -9,11 +9,11 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   title: "LLM Prices — Compare AI API Costs | Find the Cheapest LLM",
-  description: "Compare LLM API pricing across OpenAI, Anthropic, Google, Mistral & DeepSeek. Calculate costs, find the cheapest model for your use case. Updated weekly.",
+  description: "Compare LLM API pricing across OpenAI, Anthropic, Google, Mistral, DeepSeek & more. 25+ models, 10 providers. Calculate costs, find the cheapest model. Updated April 2026.",
   keywords: ["LLM pricing", "GPT-5 API cost", "Claude vs GPT pricing", "cheapest LLM API", "AI API comparison", "token cost calculator"],
   openGraph: {
     title: "LLM Prices — Compare AI API Costs",
-    description: "Find the cheapest LLM API for your project. Compare 13+ models across 5 providers.",
+    description: "Find the cheapest LLM API for your project. Compare 25+ models across 10 providers.",
     type: "website",
     url: "https://llm-prices.vercel.app",
   },
@@ -44,7 +44,7 @@ function Footer() {
   return (
     <footer className="border-t border-zinc-800 mt-auto">
       <div className="max-w-6xl mx-auto px-4 py-8 text-center text-xs text-zinc-500 space-y-2">
-        <p>Prices updated weekly via automated scraper. Last update: March 2026.</p>
+        <p>Prices updated weekly via automated scraper. Last update: April 2026.</p>
         <p className="text-zinc-600">
           Affiliate Disclosure: Some links may earn us a commission at no extra cost to you.
           This helps keep the site free and updated.

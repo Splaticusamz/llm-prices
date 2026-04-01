@@ -1,4 +1,5 @@
 import { getAllModels, getModelById, formatPrice, formatContextWindow, AFFILIATE_LINKS } from '@/lib/pricing';
+import { ModelJsonLd } from '@/components/JsonLd';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
@@ -35,6 +36,7 @@ export default async function ModelPage({ params }: { params: Promise<{ id: stri
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
+      <ModelJsonLd name={model.name} provider={model.provider} inputPrice={model.inputPricePer1M} outputPrice={model.outputPricePer1M} description={`${model.name} by ${model.provider}: ${formatContextWindow(model.contextWindow)} context window. ${model.category} tier LLM.`} />
       <div className="mb-4">
         <a href="/compare" className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors">← Back to comparison</a>
       </div>

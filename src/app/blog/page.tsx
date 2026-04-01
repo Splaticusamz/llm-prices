@@ -7,6 +7,20 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: 'llm-api-pricing-april-2026',
+    title: 'LLM API Pricing in April 2026: Complete Guide',
+    excerpt: 'The definitive guide to every LLM API price in April 2026. OpenAI, Anthropic, Google, open-source — all providers compared.',
+    date: '2026-04-01',
+    readTime: '8 min',
+  },
+  {
+    slug: 'free-llm-apis-2026',
+    title: 'Best Free LLM APIs in 2026: Complete List',
+    excerpt: 'Every free LLM API tier available right now. Build AI apps without spending a dime — we list every free tier and credit offer.',
+    date: '2026-04-01',
+    readTime: '7 min',
+  },
+  {
     slug: 'claude-4-vs-gpt-5-pricing',
     title: 'Claude 4 vs GPT-5 Pricing Comparison 2026',
     excerpt: 'A detailed breakdown of Anthropic Claude 4 and OpenAI GPT-5 API costs, performance, and value for different use cases.',

@@ -1,4 +1,6 @@
 import { getAllModels, getCheapestModels, formatPrice, formatContextWindow, AFFILIATE_LINKS } from '@/lib/pricing';
+import { WebsiteJsonLd, DatasetJsonLd, FAQJsonLd } from '@/components/JsonLd';
+import EmailCapture from '@/components/EmailCapture';
 
 export default function Home() {
   const models = getAllModels();
@@ -7,6 +9,13 @@ export default function Home() {
 
   return (
     <div className="space-y-20 pb-20">
+      <WebsiteJsonLd />
+      <DatasetJsonLd modelCount={models.length} providerCount={providers.size} />
+      <FAQJsonLd faqs={[
+        { q: 'What is the cheapest LLM API in 2026?', a: `The cheapest LLM APIs are Mistral Small ($0.10/$0.30 per 1M tokens) and GPT-4.1 Nano ($0.10/$0.40 per 1M tokens). We track ${models.length} models across ${providers.size} providers.` },
+        { q: 'How much does GPT-5 API cost?', a: 'GPT-5 costs $10.00 per 1M input tokens and $30.00 per 1M output tokens. For a typical workload of 10M tokens/month, expect to pay around $250/month.' },
+        { q: 'Is Claude or GPT cheaper?', a: 'GPT-5 ($10/$30) is significantly cheaper than Claude Opus 4 ($15/$75). However, Claude Sonnet 4 ($3/$15) competes well with GPT-4.1 ($2/$8).' },
+      ]} />
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-indigo-500/10" />
@@ -99,6 +108,9 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Email Capture */}
+      <EmailCapture />
 
       {/* Cloud Credits CTA */}
       <section className="max-w-6xl mx-auto px-4">
