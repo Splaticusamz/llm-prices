@@ -21,6 +21,13 @@ const POSTS = [
     readTime: '7 min',
   },
   {
+    slug: 'openai-api-cost-calculator-2026',
+    title: 'OpenAI API Cost Calculator: Estimate Your GPT-5 & GPT-4.1 Spend in 2026',
+    excerpt: 'Free cost calculator for OpenAI API in 2026. Estimate monthly spend for GPT-5, GPT-4.1, Mini, Nano, o3, and o4-mini with real pricing.',
+    date: '2026-04-01',
+    readTime: '6 min',
+  },
+  {
     slug: 'claude-4-vs-gpt-5-pricing',
     title: 'Claude 4 vs GPT-5 Pricing Comparison 2026',
     excerpt: 'A detailed breakdown of Anthropic Claude 4 and OpenAI GPT-5 API costs, performance, and value for different use cases.',

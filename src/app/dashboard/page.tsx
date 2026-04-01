@@ -30,6 +30,11 @@ const TASKS = [
   { name: 'Deploy to Vercel (Production)', status: 'done', date: 'Mar 23' },
   { name: 'Expand to 10 providers / 25 models', status: 'done', date: 'Mar 23' },
   { name: '38 Static Pages Generated', status: 'done', date: 'Mar 23' },
+  { name: 'JSON-LD Structured Data (rich snippets)', status: 'done', date: 'Apr 1' },
+  { name: 'Email Capture Component', status: 'done', date: 'Apr 1' },
+  { name: '/api/prices REST Endpoint', status: 'done', date: 'Apr 1' },
+  { name: '2 New SEO Blog Posts (April 2026)', status: 'done', date: 'Apr 1' },
+  { name: 'OG Metadata Updates', status: 'done', date: 'Apr 1' },
   { name: 'Google Search Console Submit', status: 'pending', date: '' },
   { name: 'Analytics Integration (Plausible/GA)', status: 'pending', date: '' },
   { name: 'Backlink Outreach Campaign', status: 'pending', date: '' },
@@ -48,8 +53,8 @@ const REVENUE_TIMELINE = [
 const STATS = {
   providers: 10,
   models: 25,
-  staticPages: 38,
-  blogPosts: 3,
+  staticPages: 143,
+  blogPosts: 5,
   affiliateLinks: '10+',
   contextWindowMax: '1M tokens',
 };

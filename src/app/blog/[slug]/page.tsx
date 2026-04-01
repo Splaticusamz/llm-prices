@@ -174,6 +174,69 @@ const POSTS: Record<string, BlogPost> = {
       </article>
     ),
   },
+  'openai-api-cost-calculator-2026': {
+    title: 'OpenAI API Cost Calculator: Estimate Your GPT-5 & GPT-4.1 Spend in 2026',
+    date: '2026-04-01',
+    description: 'Free OpenAI API cost calculator for 2026. Estimate monthly spend for GPT-5, GPT-4.1, GPT-4.1 Mini, GPT-4.1 Nano, o3, and o4-mini with real pricing data.',
+    content: (
+      <article className="prose prose-invert prose-zinc max-w-none">
+        <p>Budgeting for OpenAI&apos;s API in 2026? With seven+ models at wildly different price points, estimating your monthly spend takes more than guesswork. Here&apos;s how to calculate your exact costs — and where to save.</p>
+
+        <h2>OpenAI API Pricing (April 2026)</h2>
+        <p>OpenAI now offers models across four tiers. Here are the current per-million-token rates:</p>
+        <ul>
+          <li><strong>GPT-5:</strong> $10.00 input / $30.00 output — flagship, best quality</li>
+          <li><strong>GPT-4.1:</strong> $2.00 input / $8.00 output — production workhorse</li>
+          <li><strong>GPT-4.1 Mini:</strong> $0.40 input / $1.60 output — balanced budget option</li>
+          <li><strong>GPT-4.1 Nano:</strong> $0.10 input / $0.40 output — cheapest, 1M context</li>
+          <li><strong>o3 (reasoning):</strong> $10.00 input / $40.00 output — chain-of-thought</li>
+          <li><strong>o4-mini (reasoning):</strong> $1.10 input / $4.40 output — budget reasoning</li>
+        </ul>
+
+        <h2>How to Calculate Your Monthly Cost</h2>
+        <p>The formula is simple:</p>
+        <p><strong>Monthly cost = (input tokens × input price / 1M) + (output tokens × output price / 1M)</strong></p>
+        <p>A typical chatbot processes roughly 500 tokens input and 300 tokens output per request. At 10,000 requests/day (300K/month), here&apos;s what each model costs:</p>
+        <ul>
+          <li><strong>GPT-5:</strong> 150M input + 90M output = $1,500 + $2,700 = <strong>$4,200/mo</strong></li>
+          <li><strong>GPT-4.1:</strong> $300 + $720 = <strong>$1,020/mo</strong></li>
+          <li><strong>GPT-4.1 Mini:</strong> $60 + $144 = <strong>$204/mo</strong></li>
+          <li><strong>GPT-4.1 Nano:</strong> $15 + $36 = <strong>$51/mo</strong></li>
+        </ul>
+        <p>That&apos;s an 82x cost difference between flagship and budget for the same request volume.</p>
+
+        <h2>Hidden Costs to Watch For</h2>
+        <p>Token counts aren&apos;t always obvious. Watch for these cost multipliers:</p>
+        <ul>
+          <li><strong>System prompts:</strong> Long system prompts are charged on every request. A 2,000-token system prompt at 300K requests/month adds 600M input tokens.</li>
+          <li><strong>Conversation history:</strong> Chat apps that send full history grow input tokens linearly with conversation length.</li>
+          <li><strong>Reasoning tokens:</strong> o3 and o4-mini generate internal reasoning tokens that you pay for as output tokens — often 3-5x the visible output.</li>
+          <li><strong>Retries and fallbacks:</strong> Failed requests still cost tokens. Implement proper error handling to avoid double-billing.</li>
+        </ul>
+
+        <h2>Cost Optimization Strategies</h2>
+        <p>Most teams can cut their OpenAI spend by 50-80% with these tactics:</p>
+        <ol>
+          <li><strong>Model routing:</strong> Use GPT-4.1 Nano for simple tasks (classification, extraction) and GPT-4.1 or GPT-5 only when quality demands it. See our guide on <a href="/blog/reduce-ai-api-costs-80-percent">reducing AI API costs by 80%</a>.</li>
+          <li><strong>Prompt caching:</strong> OpenAI supports automatic prompt caching for repeated prefixes — this can halve input costs for apps with long system prompts.</li>
+          <li><strong>Batch API:</strong> If you don&apos;t need real-time responses, use the Batch API for 50% off.</li>
+          <li><strong>Shorter prompts:</strong> Every token counts. Trim system prompts, use concise instructions, and avoid repeating context.</li>
+        </ol>
+
+        <h2>OpenAI vs Alternatives</h2>
+        <p>OpenAI isn&apos;t always the cheapest. For comparable quality:</p>
+        <ul>
+          <li><strong>Claude Sonnet 4</strong> ($3/$15) competes with GPT-4.1 ($2/$8) — OpenAI is cheaper here</li>
+          <li><strong>Gemini 2.5 Flash</strong> ($0.15/$0.60) beats GPT-4.1 Nano ($0.10/$0.40) on output price but has a larger context window</li>
+          <li><strong>DeepSeek V3</strong> ($0.27/$1.10) offers strong coding performance at Mini-level prices</li>
+        </ul>
+        <p>Check our <a href="/blog/5-cheapest-llm-apis-2026">cheapest LLM APIs ranking</a> for the full comparison.</p>
+
+        <h2>Try Our Free Calculator</h2>
+        <p>Stop guessing. Use the <a href="/">LLM Prices comparison tool</a> to plug in your exact token volumes and see costs across every provider instantly. Filter by OpenAI models, compare with Anthropic and Google, and find the cheapest option for your workload.</p>
+      </article>
+    ),
+  },
   'reduce-ai-api-costs-80-percent': {
     title: 'How to Reduce Your AI API Costs by 80%',
     date: '2026-03-23',
