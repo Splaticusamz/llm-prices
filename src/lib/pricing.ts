@@ -91,6 +91,11 @@ export const AFFILIATE_LINKS: Record<string, { url: string; label: string; credi
   groq: { url: `https://console.groq.com/signup${UTM}`, label: 'Groq', credit: 'Free tier' },
   deepseek: { url: `https://platform.deepseek.com/sign_up${UTM}`, label: 'DeepSeek', credit: '$5' },
   perplexity: { url: `https://docs.perplexity.ai/${UTM}`, label: 'Perplexity', credit: '$5' },
+  xai: { url: `https://console.x.ai/signup${UTM}`, label: 'xAI / Grok', credit: '$25' },
+  amazon: { url: `https://aws.amazon.com/bedrock/${UTM}`, label: 'Amazon Bedrock', credit: '$300 AWS Free Tier' },
+  meta: { url: `https://api.together.xyz/signup${UTM}`, label: 'Together AI (Llama)', credit: '$5' },
+  replicate: { url: `https://replicate.com/signin${UTM}`, label: 'Replicate', credit: 'Free tier' },
+  cerebras: { url: `https://cloud.cerebras.ai/signup${UTM}`, label: 'Cerebras', credit: 'Free tier' },
 };
 
 export function generateVSPairs(): { modelA: Model; modelB: Model; slug: string }[] {
