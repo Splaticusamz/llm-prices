@@ -300,6 +300,89 @@ const POSTS: Record<string, BlogPost> = {
       </article>
     ),
   },
+  'cheapest-llm-api-2026': {
+    title: 'Cheapest LLM API in 2026: Full Ranking by Cost',
+    date: '2026-04-03',
+    description: 'The definitive ranking of the cheapest LLM APIs in 2026. Real prices, real benchmarks, real recommendations — find the most affordable AI API for your use case.',
+    content: (
+      <article className="prose prose-invert prose-zinc max-w-none">
+        <p>LLM prices have dropped dramatically in 2026. What cost $20/1M tokens two years ago now runs under $1. Here's the full ranking of the cheapest LLM APIs available right now — with real cost calculations so you can choose the right model for your budget.</p>
+
+        <h2>The Full Cheapest LLM API Ranking (April 2026)</h2>
+        <p>Ranked by combined input + output cost per 1M tokens (assuming 2:1 input/output ratio):</p>
+
+        <h3>🥇 Tier 1: Under $0.50/1M tokens</h3>
+        <ul>
+          <li><strong>GPT-4.1 Nano</strong> — $0.10 input / $0.40 output — <em>$0.20 combined</em>. OpenAI's smallest model. Ideal for classification, extraction, and simple chat. Supports 1M token context.</li>
+          <li><strong>Mistral Small 3</strong> — $0.10 input / $0.30 output — <em>$0.17 combined</em>. Often the cheapest option. European data residency available. Best for multilingual use cases.</li>
+          <li><strong>Gemini 2.5 Flash</strong> — $0.15 input / $0.60 output — <em>$0.30 combined</em>. Google's budget model with a stunning 1M token context window. Best cheap option for long-document work.</li>
+        </ul>
+
+        <h3>🥈 Tier 2: $0.50–$2/1M tokens</h3>
+        <ul>
+          <li><strong>GPT-4.1 Mini</strong> — $0.40 input / $1.60 output — <em>$0.80 combined</em>. The sweet spot for production workloads. Handles most tasks mid-tier models do at a fraction of the cost.</li>
+          <li><strong>DeepSeek V3</strong> — $0.27 input / $1.10 output — <em>$0.55 combined</em>. Astonishingly cheap for the quality. Top pick for coding tasks and long-context reasoning on a budget.</li>
+          <li><strong>Claude Haiku 3.5</strong> — $0.80 input / $4.00 output — <em>$1.87 combined</em>. Anthropic's fastest model. Great for high-volume chat applications.</li>
+        </ul>
+
+        <h3>🥉 Tier 3: $2–$10/1M tokens</h3>
+        <ul>
+          <li><strong>GPT-4.1</strong> — $2.00 input / $8.00 output — <em>$4.00 combined</em>. Full frontier quality at mid-tier price. Massive 1M context window. Recommended for serious coding projects.</li>
+          <li><strong>Claude Sonnet 4</strong> — $3.00 input / $15.00 output — <em>$7.00 combined</em>. Best quality-per-dollar for complex tasks. 95% of Opus quality at 80% less cost.</li>
+          <li><strong>Gemini 2.5 Pro</strong> — $1.25 input / $10.00 output — <em>$4.17 combined</em>. Google's mid-range workhorse. Best-in-class for multimodal and code tasks.</li>
+        </ul>
+
+        <h2>Real Monthly Cost Calculations</h2>
+        <p>For a typical SaaS app sending 50M tokens/month (33M input, 17M output):</p>
+        <ul>
+          <li><strong>Mistral Small 3:</strong> $3.30 + $5.10 = <strong>$8.40/month</strong></li>
+          <li><strong>GPT-4.1 Nano:</strong> $3.30 + $6.80 = <strong>$10.10/month</strong></li>
+          <li><strong>GPT-4.1 Mini:</strong> $13.20 + $27.20 = <strong>$40.40/month</strong></li>
+          <li><strong>DeepSeek V3:</strong> $8.91 + $18.70 = <strong>$27.61/month</strong></li>
+          <li><strong>Claude Sonnet 4:</strong> $99 + $255 = <strong>$354/month</strong></li>
+          <li><strong>GPT-5:</strong> $330 + $510 = <strong>$840/month</strong></li>
+        </ul>
+        <p>That's a <strong>100x cost difference</strong> between the cheapest and most expensive options at the same volume.</p>
+
+        <h2>Which Cheapest LLM API is Right for You?</h2>
+
+        <h3>For AI Agent Pipelines</h3>
+        <p>Use <strong>GPT-4.1 Mini</strong> or <strong>DeepSeek V3</strong> for planning and reasoning steps. Reserve flagship models for final output only. A well-designed routing strategy can cut costs by 70%+.</p>
+
+        <h3>For High-Volume Classification & Extraction</h3>
+        <p><strong>GPT-4.1 Nano</strong> or <strong>Mistral Small 3</strong> are your best options. Both handle structured output reliably and cost pennies per thousand calls.</p>
+
+        <h3>For Long Documents (RAG, Summarization)</h3>
+        <p><strong>Gemini 2.5 Flash</strong> wins here. The 1M token context means you can skip chunking entirely, and at $0.15/1M input it's cheaper than alternatives that require complex RAG pipelines.</p>
+
+        <h3>For Coding Assistants</h3>
+        <p><strong>DeepSeek V3</strong> punches above its weight on code tasks for the price. For better quality, <strong>GPT-4.1</strong> at $2/$8 is the best value among frontier-tier coding models.</p>
+
+        <h2>Free Tier Options</h2>
+        <p>Don't forget free tiers for prototyping:</p>
+        <ul>
+          <li><strong>Google Gemini API</strong> — Free tier with Gemini 2.5 Flash (rate-limited)</li>
+          <li><strong>OpenAI</strong> — $5 free credits for new accounts</li>
+          <li><strong>Mistral</strong> — Free tier with rate limits on smaller models</li>
+          <li><strong>Groq</strong> — Free tier with open-source models (Llama, Mixtral) at very high speed</li>
+        </ul>
+        <p>See our full guide on <a href="/blog/free-llm-apis-2026">best free LLM APIs in 2026 →</a></p>
+
+        <h2>The Cost Optimization Playbook</h2>
+        <p>The cheapest LLM API is only part of the equation. Pair it with these strategies to maximize savings:</p>
+        <ol>
+          <li><strong>Model routing:</strong> Send easy tasks to cheap models, hard tasks to smart ones. Automated routers like OpenRouter make this easy.</li>
+          <li><strong>Prompt caching:</strong> Most providers cache repeated prompt prefixes. Useful for system prompts and few-shot examples.</li>
+          <li><strong>Batch API:</strong> OpenAI and Anthropic offer 50% discounts for async batch requests.</li>
+          <li><strong>Structured output:</strong> Forcing JSON output reduces hallucinations and cuts post-processing costs.</li>
+        </ol>
+        <p>Read the full guide: <a href="/blog/reduce-ai-api-costs-80-percent">How to Reduce AI API Costs by 80% →</a></p>
+
+        <h2>Compare All Models Side-by-Side</h2>
+        <p>Use our <a href="/compare">model comparison table</a> to filter by price, context window, and provider. Or try the <a href="/calculator">cost calculator</a> to see exact monthly spend for your workload.</p>
+      </article>
+    ),
+  },
   'reduce-ai-api-costs-80-percent': {
     title: 'How to Reduce Your AI API Costs by 80%',
     date: '2026-03-23',

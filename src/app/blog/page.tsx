@@ -7,6 +7,13 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: 'cheapest-llm-api-2026',
+    title: 'Cheapest LLM API in 2026: Full Ranking by Cost',
+    excerpt: 'The definitive ranking of every cheap LLM API in 2026. Real prices, tier breakdowns, and monthly cost calculations to find the most affordable AI API for your use case.',
+    date: '2026-04-03',
+    readTime: '7 min',
+  },
+  {
     slug: 'best-llm-for-coding-2026',
     title: 'Best LLM for Coding in 2026: Ranked by Price & Performance',
     excerpt: 'Which LLM writes the best code per dollar? We benchmark Claude Opus 4, GPT-5, Gemini 2.5 Pro, DeepSeek V3, and more on real coding tasks.',
